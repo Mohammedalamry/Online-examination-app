@@ -3,7 +3,7 @@ const router = express.Router();
 //requir Shemam user module
 const User = require('../models/user');
 
-router.get('/user' , (req , res)=>{
+router.get('/api/users' , (req , res)=>{
 
 res.send("User1")
 
@@ -37,6 +37,50 @@ router.post('/api/users', (req, res)=> {
       });
   
   });
+
+//route  updat user 
+
+//update  specific ExqamQoustion
+router.put('/api/users/:id',(req,res)=>{
+  res.send( {Type:'Put'})
+
+
+});
+
+
+//rout detel user
+router.delete('/api/users/:id',(req,res)=>{
+
+    res.send( {Type:'detele'})
+
+});
+// route for Admin to creat an Exam
+router.post("/api/user/adminmail/createExame",(req,res)=>{
+  res.send( {Type:'creatnewExam'})
+
+
+
+});
+
+
+// route for Admin to creat new Qutions in Specific Exam
+router.post("/api/user/adminmail/Examnameorid",(req,res)=>{
+  res.send( {Type:'creatnewExam'})
+
+
+
+});
+
+
+// 
+
+
+
+
+
+
+
+
 
 
  
