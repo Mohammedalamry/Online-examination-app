@@ -9,7 +9,8 @@ const userSchima = new mongoose.Schema({
 
     , Exams: [{
       type:mongoose.Schema.Types.ObjectId,
-      ref: 'Exam'
+      ref: 'Exam',
+      score: String
     }]
    , blogs: { type:mongoose.Schema.Types.ObjectId ,ref: 'blog'} 
     

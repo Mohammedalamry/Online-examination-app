@@ -4,7 +4,7 @@ const express = require('express');
 // Creates a new instance of express on our server
 const app = express();
 //Manngoose database 
-
+const cors = require('cors')
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/project4', {useNewUrlParser : true , useUnifiedTopology: true } )
@@ -23,6 +23,9 @@ const db = require('./config/db');
 //   console.log('connected to mongo');
 // });
 
+//defined cors 
+
+// const cors = require('cors');
 
 
 
@@ -42,7 +45,7 @@ app.get('/', function(req, res) {
 //   });
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
-
+app.use(cors())
   app.use('/exam' , require('./app/routes/Exam'))
  
   app.use('/user', require('./app/routes/user'))
@@ -52,9 +55,10 @@ app.use(express.urlencoded({extended : false}))
 //   });
 // tells the server where to listen for requests
 const port = process.env.PORT || 3001;
-
+//  const reactPort =3000;
 app.listen(port, function() {
   // tells the server where to listen for requests on port 3000
+  // app.use(cors({ origin: process.env.CLIENT_ORIGIN || `http://localhost:${reactPort}` }));
 
   console.log(`hello-express is listening on port ${port}`);
 }); // actualizing the line above

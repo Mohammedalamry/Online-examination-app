@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer";
 import {Card, CardGroup,} from 'react-bootstrap'
-
+import Creat from "./Components/Creat"
 function App() {
   return (
     <div>
@@ -14,6 +14,8 @@ function App() {
        <Footer/>
     </div>
     <CardGroup>
+
+    <Creat/>
      <Card>
       <Card.Img variant="top" src="holder.js/100px160" />
       <Card.Body>

@@ -60,13 +60,25 @@ Exam.create(req.body)
 
 //update  specific ExqamQoustion
 router.put('/api/Exams/:id',(req,res)=>{
-    console.log('bo'+req.body )
- Exam.findByIdAndUpdate(req.params.id,{$push:{theQuestion:req.body}}, {new:true}, (err, updatedModel)=>{
-     
-    res.send(updatedModel);
-}); 
+    console.log(req.body )
+ Exam.findByIdAndUpdate(req.params.id,{$push:{theQuestion:req.body}},{useFindAndModify :false} )
+ .then(exam => res.json({exam , msg : "yeeeee"}))
+ .catch(err=> res.send(err))
 
 });
+
+//udate new thing 
+//update  specific ExqamQoustion
+// router.put('/api/Exams1/:id',(req,res)=>{
+//     console.log('bo'+req.body )
+//  Exam.findByIdAndUpdate(req.params.id,{theQuestion: req.body.theQuestion} , {new:true}, (err, updatedModel)=>{
+     
+//     res.send(updatedModel);
+// }); 
+
+// });
+
+
 
 
 
