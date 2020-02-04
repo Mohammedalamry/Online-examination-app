@@ -29,7 +29,7 @@ this.state={
     } ,{  theQuestion: "How ggold are you ",
     first_Option: " 32Exellent",
     sec_Option: "12",
-    thrid_Option: " Hinot bad",
+    thrid_Option: " uuuuuu bad",
     forth_Option: " fantistatic ",
     correct_answer: "good"
 }]
@@ -37,10 +37,45 @@ this.state={
 }
 
 
+//   
+
+handlExamname(e){
+this.setState( {title: e.target.value})
+
+
+}
+
+handlExamQutsions(e){
+    const title = this.state.title;
+    const theQuestion =this.state.theQuestion;
+    let updetate = this.state.theQuestion
+
+    this.setState(   {  theQuestion: "Mommmed ",
+    first_Option: " Exellent",
+    sec_Option: "hhh good",
+    thrid_Option: " Hinotnb,bvbvcx7778865 bad",
+    forth_Option: " fantistatic ",
+    correct_answer: "good"
+});
+    axios.post('http://localhost:3001/Exam/api/exams',{title,theQuestion})
+    
+      .then(res=>{
+     console.log(res.data)
+      });
 
 
 
 
+}
+//this statment to push element into arry 
+handleSubmit(e){                
+  
+
+    this.setState({results:this.state.number1+this.state.number2});
+  
+    e.preventDefault();
+
+}
  
 
  
@@ -66,7 +101,7 @@ componentDidMount() {
 
 //post  
 
-
+ 
  const title = this.state.title;
  const theQuestion =this.state.theQuestion;
  let updetate = this.state.theQuestion
@@ -77,13 +112,16 @@ componentDidMount() {
 // });
 //put
 
-axios.put('http://localhost:3001/Exam/api/exams/5e3818677593593724856c96',{theQuestion})
+
+axios.put('http://localhost:3001/Exam/api/exams/5e3818677593593724856c96',{title,theQuestion})
     
 .then(res=>{
  console.log(res.data)
 // console.log(updetate)
 
 });
+
+
 
 //delet  
 // axios.delete('http://localhost:3001/Exam/api/exams',{title,theQuestion})
@@ -102,7 +140,7 @@ axios.get('http://localhost:3001/Exam/api/exams/5e3818677593593724856c96')
     
     });
 
- 
+    console.log(this.title.value)
 
     
     }
@@ -110,55 +148,57 @@ axios.get('http://localhost:3001/Exam/api/exams/5e3818677593593724856c96')
 render(){
 
 
-
-
+    
 
 return(
+  
 
 <div> 
 
 
-<div>  
-<form>
-Enter name of Exam   
-    <input type="text" onChange={ this.hanleEaxm1}/>
-     
+<div className="title">  
+    <form>
+    Enter name of Exam   
+    <input type="text" ref={tl=>this.title=tl}/>
+    
     </form>
     </div>
-
+<div>
+ 
 <form onSubmit={this.handleSubmit}>
  <ul>
   
     <li>
     Enter  Question
     </li>
-  
-    <input type="text"  onChange={ this.hanleNumber2}/>
+    <input type="text"  ref={Qs=>this.first_Option=Qs}/>
     <li>
-Enter first_Option
-    <input type="text"  onChange={ this.hanleNumber2}/>
-</li>
-<li>
+     Enter first_Option
+    <input type="text" ref={op=>this.first_Option=op }/>
+   </li>
+    <li>
     Enter  sec_Option
 
-    <input type="text"  onChange={ this.hanleNumber2}/>
+    <input type="text" ref={op=>this.sec_Option=op }/>
     </li>
     <li>
     Enter thrid_Option
 
-    <input type="text"  onChange={ this.hanleNumber2}/>
+    <input type="text"  ref={op=>this.thrid_Option=op }/>
     </li>
     <li>
     Enter forth_Option
-  <input type="text"  onChange={ this.hanleNumber2}/>
+  <input type="text"  ref={op=>this.forth_Option=op }/>
   </li>
   <li>
    Enter correct_answer
-  <input type="text"  onChange={ this.hanleNumber2}/>
+  <input type="text"  ref={op=>this.correct_answer=op }/>
   </li>
   </ul>
      </form>
+<button>submit</button>
 
+</div>
 
  </div>
 
