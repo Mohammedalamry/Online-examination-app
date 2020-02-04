@@ -4,10 +4,16 @@ import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer";
 import {Card, CardGroup,} from 'react-bootstrap'
 import Creat from "./Components/Creat"
-import Usersing from "./usersing.js";
+import Usersing from "./usersing";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 function App() {
   return (
     <div>
+    <Router>
 
     <div className="App">
        <NavBar />
@@ -16,17 +22,15 @@ function App() {
     </div>
     <CardGroup>
 {/* usersing */}
-   <Usersing/>
      <Card>
      
-      <Card.Img variant="top" src="holder.js/100px160" />
       <Card.Body>
 
         <Card.Title>Card title</Card.Title>
+        <Link to="/createUser">Create new User</Link>
+
         <Card.Text>
        
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
         </Card.Text>
       </Card.Body>
       <Card.Footer>
@@ -34,13 +38,11 @@ function App() {
       </Card.Footer>
      </Card>
     <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
       <Card.Body>
-        <Card.Title> Creat new Exam</Card.Title>
-        <Creat/>
+        <Card.Title> Creat new User</Card.Title>
+        <Link to="/create">Create new Exam</Link>
         <Card.Text>
-          This card has supporting text below as a natural lead-in to additional
-          content.{' '}
+ 
         </Card.Text>
       </Card.Body>
       <Card.Footer>
@@ -48,13 +50,10 @@ function App() {
       </Card.Footer>
     </Card>
     <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
       <Card.Body>
         <Card.Title>Card title</Card.Title>
         <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This card has even longer content than the first to
-          show that equal height action.
+ 
         </Card.Text>
       </Card.Body>
       <Card.Footer>
@@ -62,9 +61,17 @@ function App() {
        </Card.Footer>
      </Card>
     </CardGroup>
+      <div>
+
+        <Route path="/createUser" component={Usersing} />
+        <Route path="/create" component={Creat} />
+      </div>
+    </Router>
     </div>
   
+
   );
+
 }
 
 export default App;

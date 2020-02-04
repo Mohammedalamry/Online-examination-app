@@ -4,8 +4,8 @@ const userSchima = new mongoose.Schema({
 
   first_name : {type : String },
     last_name: {type : String },
-    email: {type : String,required:true, unique:true   },
-    password: {type : String , required:true}
+    email: {type : String, unique:true   },
+    password: {type : String }
 
     , Exams: [{
       type:mongoose.Schema.Types.ObjectId,
