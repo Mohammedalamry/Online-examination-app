@@ -5,7 +5,12 @@ const User = require('../models/user');
 
 router.get('/api/users' , (req , res)=>{
 
-res.send("User1")
+  User.find()
+  .then((users)=>{     
+  res.send(users)
+  
+  });
+  
 
 
 });
@@ -50,10 +55,14 @@ router.put('/api/users/:id',(req,res)=>{
 
 //rout detel user
 router.delete('/api/users/:id',(req,res)=>{
+ 
+  User.findByIdAndRemove(req.params.id, (err, deletedExam)=>{
+      if (err)  { console.log(err) }
+     res.json(deletedExam);
+   });
+  })
 
-    res.send( {Type:'detele'})
 
-});
 // route for Admin to creat an Exam
 router.post("/api/user/adminmail/createExame",(req,res)=>{
   res.send( {Type:'creatnewExam'})

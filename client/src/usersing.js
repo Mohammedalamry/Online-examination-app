@@ -3,16 +3,27 @@ import axios from 'axios';
 class Usersing extends Component {
 constructor(props){
 super(props);
+this.state={
+    first_name:'',
+    last_name:''
+    
+}
+this.handlfristname = this.handlfristname.bind(this);
+this.handllasttname = this.handllasttname.bind(this);
+
+
 
 }
 
 //   
 
-// // handlExamname(e){
-// // this.setState( {title: e.target.value})
+  handlfristname(e){
+ this.setState( {first_name: e.target.value});
+  }
+ handllasttname(e){
+    this.setState( {last_name: e.target.value})
 
-
-// // }
+  }
 
 // handlExamQutsions(e){
 //     const title = this.state.title;
@@ -39,7 +50,7 @@ super(props);
 //this statment to push element into arry 
 handleSubmit(e){                
   
-
+// this.setState({ first_name:e.target.value , last_name:e.target.value })
 //     axios.post('http://localhost:3001/User/api/users')
     
 //     .then(res=>{
@@ -48,10 +59,11 @@ handleSubmit(e){
 axios({
     method: 'post',
     url:'http://localhost:3001/User/api/users',
-    headers: {}, 
+     
     data: {
-        first_name: '',
-        last_name: ''
+
+        first_name: this.state.first_name,
+        last_name:  this.state.last_name
     }
   });
 }
@@ -93,9 +105,9 @@ return(
     <div>   
     <form>
     <label >Enter your first name </label> 
-    <input type="text" />
+    <input type="text" onChange={this.handlfristname} />
     <label >Enter your last name </label> 
-    <input type="text" />
+    <input type="text" onChange={this.handllasttname}/>
     <button onClick={(event)=>this.handleSubmit(event)}>submit</button>
 
     </form>
