@@ -6,6 +6,7 @@ import {Card, CardGroup,} from 'react-bootstrap'
 import Creat from "./Components/Creat"
 import AllUsers from './AllUsers'
 import Usersing from "./usersing";
+import Test from './Components/test'
 import {
   BrowserRouter as Router,
   Route,
@@ -13,10 +14,12 @@ import {
 } from 'react-router-dom';
 function App() {
   return (
-    <div>
     <Router>
 
+    <div>
     <div className="App">
+ 
+
        <NavBar />
        <h1> Test your Information </h1>
        <Footer/>
@@ -63,10 +66,13 @@ function App() {
 
         <Route path="/createUser" component={Usersing} />
         <Route path="/create" component={Creat} />
+        <Route path="/update/:id" render={ (props)=> <Test {...props} /> } />
+
       </div>
-    </Router>
+    
     </div>
-  
+    </Router>
+
 
   );
 

@@ -45,12 +45,12 @@ router.post('/api/users', (req, res)=> {
 
 //route  updat user 
 
-//update  specific ExqamQoustion
-router.put('/api/users/:id',(req,res)=>{
-  res.send( {Type:'Put'})
+// //update  specific ExqamQoustion
+// router.put('/api/users/:id',(req,res)=>{
+//   res.send( {Type:'Put'})
 
 
-});
+// });
 
 
 //rout detel user
@@ -81,9 +81,18 @@ router.post("/api/user/adminmail/Examnameorid",(req,res)=>{
 });
 
 
-// 
-
-
+// //route  update user 
+      
+router.put('/api/users/:id',(req,res)=>{
+    console.log("work")
+   User.findByIdAndUpdate(req.params.id,{first_name: req.body.first_name,last_name:req.body.last_name} , {new:true}, (err, updatedModel)=>{
+       
+       res.send(updatedModel);
+   }); 
+  
+  });
+  
+  
 
 
 
