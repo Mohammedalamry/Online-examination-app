@@ -1,17 +1,19 @@
-import React from 'react';
-import './App.css';
-import NavBar from "./Components/NavBar"
+import React from "react";
+import "./App.css";
+import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-import {Card, CardGroup,} from 'react-bootstrap'
-import Creat from "./Components/Creat"
-import AllUsers from './AllUsers'
+import { Card, CardGroup } from "react-bootstrap";
+import Creat from "./Components/Creat";
+import AllUsers from "./AllUsers";
 import Usersing from "./usersing";
+
+import AddQuetion from "./AddQusetion/AddQuestion";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { ShowAll } from "./Questions/ShowAll";
+import {ShowOne} from './Questions/ShowOne'
 import Test from './Components/test'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+
+
 function App() {
   return (
     <Router>
@@ -64,8 +66,13 @@ function App() {
       <div>
       <Route path="/allUsers" component={AllUsers} />
 
+  <Route exact path="/Exams" render={props => <ShowAll {...props} />} />
+        <Route exact path="/Exams/:id" render={props => <ShowOne {...props} />} />
+        <Route path="/addQuestion" render={() => <AddQuetion />} />
+        <Route path="/allUsers" component={AllUsers} />
         <Route path="/createUser" component={Usersing} />
         <Route path="/create" component={Creat} />
+
         <Route path="/update/:id" render={ (props)=> <Test {...props} /> } />
 
       </div>
@@ -74,8 +81,8 @@ function App() {
     </Router>
 
 
-  );
 
+  );
 }
 
 export default App;

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { InputGroup, FormControl, Container, Row, Col, Button } from 'react-bootstrap'
 import { AddOneQuetion } from './AddOneQuestion'
 import axios from 'axios'
-export const AddQuetion = () => {
+import {withRouter} from 'react-router-dom'
+
+const AddQuetion = (props) => {
     const [qc, setQc] = useState([])
     const [title, setTitle] = useState("z")
     const [open, setOpen] = useState(false)
@@ -19,7 +21,7 @@ export const AddQuetion = () => {
     }
     useEffect(() => {
         
-        console.log(title)
+        console.log(props)
     });
 
     const onSubmit = () => {
@@ -52,9 +54,13 @@ export const AddQuetion = () => {
                 <Row className="justify-content-md-right" >
                     <Col md={{ span: 2, offset: 10 }}> <Button onClick={() => setOpen(!open)}>Add Question</Button></Col>
                 </Row>
-                <Button variant="success" onClick={onSubmit}>Submit !!</Button>
+                <Button variant="primary" onClick={()=> { onSubmit()  
+                setTimeout(() => {
+                    props.history.push('/Exams')
+                }, 1000); } }>Submit !!</Button>
             </Container>
 
         </div >
     )
 }
+export default withRouter(AddQuetion)

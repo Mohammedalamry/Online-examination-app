@@ -21,14 +21,16 @@ import {
               <Nav.Link href="/update" >update&nbsp;<i className="fas fa-home"></i>
               </Nav.Link>
               <Nav className="nav-link text-white text uppercase  ml-5"></Nav>
-              <Nav.Link href="#islamicquiz">Islamic Quiz&nbsp;<i className="fas fa-mosque"></i></Nav.Link>
+              {/* addQuestion */}
+              <Nav.Link href="/addQuestion">add Question&nbsp;<i className="fas fa-mosque"></i></Nav.Link>
               <Nav className="nav-link text-white text uppercase  ml-5"></Nav>
-              <Nav.Link href="#fullstackquiz">Full Stack Quiz&nbsp;<i className="fas fa-laptop-code"></i></Nav.Link>
+              <Nav.Link href="/Exams">All Exams&nbsp;<i className="fas fa-laptop-code"></i></Nav.Link>
+              
               <Nav className="nav-link text-white text uppercase  ml-5"></Nav>
             </Nav>
             <Form inline>
               
-              <Navbar.Brand href="#admin">Admin&nbsp;<i className="fas fa-graduation-cap"></i></Navbar.Brand>
+              {/* <Navbar.Brand href="#admin">Admin&nbsp;<i className="fas fa-graduation-cap"></i></Navbar.Brand> */}
               <Button variant="outline-info">Admin</Button>
             </Form>
           </Navbar>

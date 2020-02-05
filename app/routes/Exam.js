@@ -5,9 +5,9 @@ const Exam = require('../models/Exam')
 
 router.get('/api/Exams',(req,res)=>{   
  
-Exam.find()
-.then((Exams)=>{     
-console.log(Exams)
+        Exam.find()
+    .then((Exams)=>{     
+    console.log(Exams)
 res.send(Exams)
 
 });
@@ -15,7 +15,7 @@ res.send(Exams)
 
 }) ;
 /// get specif exam qoutions
-router.get('/api/Exams/:id',(req,res)=>{   
+router.get('/Exams/:id',(req,res)=>{   
     Exam.findById(req.params.id, (err, foundExam)=>{
         if (err)  { res.send(err) }
         res.json(foundExam);
@@ -132,7 +132,7 @@ router.put('/api/Exams/Examsid/titleofExam/nameqoutions',(req,res)=>{
 //deletquoitions
 router.delete('/api/Exams/Examsid/titleofExam/nameqoutions',(req,res)=>{
 
-    res.send( {Type:'update'})
+    Exam.remove({}).then(exam => res.send("secsos")).catch(err => res.send("error"))
 
 });
 
