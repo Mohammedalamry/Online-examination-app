@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# project-4-Exam
+What is the application about?
 
-## Available Scripts
+# The Project Is An Exam App which the user can test his own knowledge .
 
-In the project directory, you can run:
+What API did you choose to use?
+# We added our API by Communicating with Axios and calling from the data base.
+What was the most difficult part of the project?
+# We faced a difficulty in adding routes and forms 
+What was your favorite part of the project
+# We learning a new technics such as adding new technic and styles.
+What would your team like to add next?
+# We will work to add more styles and components and Authentecation, and let the user add comments. 
 
-### `yarn start`
+# The Used technololges.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Build a full stack web application by using MongoDB,AXIOS,AJAX,APIs,Node,NPM as Back-End and React with Boostrap as a Front-End. And we Have had 3 models . 
+AJAX: Using Axios to make asynchronous javascript calls.
+APIs: Communicating to an API using Axios to fetch data.
+Node: An open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.
+NPM: A package manager for Node.js packages, or modules
+React: A front end framework for building modern web applications.
+Express: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+MongoDB: A cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
+Mongoose: Provides a schema-based solution for object modeling with Node.js to model your Mongodb data.
+JSON APIs: JSON (or JavaScript Object Notation) is a lightweight, easy and popular way to exchange data. A backend REST 
+We Have had added a full CRUD on all the models and the user is able to Add/Delete for all the models and we have had high quality code: and the code is well-structured and readable and it is Short and clear functions that do one thing
+we tryed our best to DRY (Don't Repeat Yourself) in coding
+and here you are the depoloyments on Heroku 
+# Project Wirefram link
+https://ahmad813038.invisionapp.com/freehand/competitetx-uXwJzLXsw?v=foNqeqqxKDfAoWqNY%2BtacA%3D%3D&linkshare=urlcopied
