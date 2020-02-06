@@ -1,0 +1,35 @@
+.Exam1{
+  border: 1px solid black;
+  border-style: dotted;
+  margin-top: 170px;
+}
+.title{
+
+margin-bottom: 70px;
+
+
+}
+
+h5 {
+  cursor: pointer;  
+}
+.margen{
+  margin: 100px;
+}
+/* *{
+  border : 1px solid black;
+} */
+.qc{
+ margin-top: 40px;
+margin-bottom: 20px ;
+}
+.QC {
+  border : 1px solid black;
+  margin: 4px;
+
+}
+.Exam{
+  margin-top: 70px;
+  border: 2px solid black;
+  border-style: dotted;
+}
