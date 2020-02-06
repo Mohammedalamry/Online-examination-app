@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Test from './Components/test'
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    NavLink
+  } from 'react-router-dom';
 class Usersing extends Component {
 constructor(props){
 super(props);
@@ -58,7 +67,9 @@ return(
         <td>{item.first_name}</td>
         <td>{item.last_name}</td>
         <td><button onClick={()=>this.handleDelete(item._id)}>Delete</button></td>
+        <Link to={`update/${item._id}`}>
         <td><button>Edit</button></td>
+      </Link>
 
     </tr>
     

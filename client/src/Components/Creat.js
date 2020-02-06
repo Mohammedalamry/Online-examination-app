@@ -211,22 +211,19 @@ return(
 <div> 
 
 
-<div className="title">  
-    <form>
+<form onSubmit={this.handleSubmit}>
+
     Enter name of Exam   
     <input type="text" onChange={this.handlExamname}/>
-    <button onClick={(event)=>this.handlQuestions(event)}   >submit</button>
 
-    </form>
+   
 
-    </div>
-<div>
  
-<form onSubmit={this.handleSubmit}>
+ 
  <ul>
   
     <li>
-    Enter  Question
+    Enter First Question
     </li>
     <input type="text"  onChange={this.handltheQuestion}/>
     <li>
@@ -258,7 +255,6 @@ return(
 
 </div>
 
- </div>
 
 
 

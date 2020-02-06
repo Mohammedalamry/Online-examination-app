@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import {Navbar ,Nav , Form  , Button} from 'react-bootstrap'
-
+// import Creat from "./Components/Creat"
+// import AllUsers from './Components/AllUsers'
+// import Usersing from "./Components/usersing";
+// import Test from './Components/test.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
  class NavBar extends Component {
     render() {
         return (
@@ -9,6 +17,8 @@ import {Navbar ,Nav , Form  , Button} from 'react-bootstrap'
             <Nav className="m-auto ml-5">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />    
               <Nav.Link href="#home" >Home&nbsp;<i className="fas fa-home"></i>
+              </Nav.Link>
+              <Nav.Link href="/update" >update&nbsp;<i className="fas fa-home"></i>
               </Nav.Link>
               <Nav className="nav-link text-white text uppercase  ml-5"></Nav>
               {/* addQuestion */}
